@@ -10,7 +10,7 @@ export default defineConfig({
 
 	projectId,
 	dataset,
-	// basePath: '/admin',
+	basePath: '/admin',
 
 	plugins: [
 		structureTool({
