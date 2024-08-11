@@ -13,9 +13,11 @@
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
+		"@sanity/eslint-config-studio": "^4.0.0",
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
+		"@types/react": "^18.3.3",
 		"autoprefixer": "^10.4.20",
 		"postcss": "^8.4.41",
 		"prettier": "^3.1.1",
@@ -26,5 +28,12 @@
 		"typescript": "^5.0.0",
 		"vite": "^5.0.3"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@sanity/vision": "^3.53.0",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"sanity": "^3.53.0",
+		"styled-components": "^6.1.12"
+	}
 }
