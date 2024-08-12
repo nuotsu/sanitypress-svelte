@@ -7,9 +7,7 @@
 				<div
 					class="flex flex-col gap-3 self-start max-sm:mx-auto max-sm:items-center"
 				>
-					<a class="h3 md:h2 max-w-max" href="/">
-						{site?.title}
-					</a>
+					<Logo {site} />
 
 					<!-- Social -->
 				</div>
@@ -35,6 +33,7 @@
 	import { page } from '$app/stores'
 	import { useQuery } from '@sanity/svelte-loader'
 	import { PortableText } from '@portabletext/svelte'
+	import Logo from '$/ui/Logo.svelte'
 
 	const query = useQuery<Sanity.Site>({
 		query: siteQuery,

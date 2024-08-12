@@ -7,7 +7,7 @@ export default {
 				ink: '#000',
 				canvas: '#fff',
 
-				accent: '#000',
+				accent: '#d43008',
 			},
 		},
 	},

@@ -1,6 +1,7 @@
+<SkipToContent />
 <Header />
 
-<main>
+<main id="main-content" tabIndex="-1">
 	<slot></slot>
 </main>
 
@@ -12,6 +13,7 @@
 	import { enableVisualEditing } from '@sanity/visual-editing'
 	import { useLiveMode } from '@sanity/svelte-loader'
 	import client from '$lib/sanity/client'
+	import SkipToContent from '$/ui/SkipToContent.svelte'
 	import Header from '$/ui/header/index.svelte'
 	import Footer from '$/ui/footer/index.svelte'
 	import PreviewState from '$/ui/PreviewState.svelte'

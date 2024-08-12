@@ -15,6 +15,7 @@ declare global {
 	namespace Sanity {
 		type Site = SanityDocument & {
 			title: string
+			subtitle?: string
 			copyright?: any
 		}
 	}

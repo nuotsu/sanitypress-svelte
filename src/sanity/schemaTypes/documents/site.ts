@@ -16,6 +16,20 @@ export default defineType({
 			validation: (Rule) => Rule.required(),
 		}),
 		defineField({
+			name: 'subtitle',
+			type: 'string',
+			group: 'general',
+		}),
+		defineField({
+			name: 'logo',
+			type: 'logo',
+			options: {
+				collapsable: true,
+				collapsed: true,
+			},
+			group: 'general',
+		}),
+		defineField({
 			name: 'copyright',
 			type: 'array',
 			of: [
