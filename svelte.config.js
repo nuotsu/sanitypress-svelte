@@ -15,6 +15,7 @@ const config = {
 
 		alias: {
 			$: 'src',
+			$sanity: 'sanity',
 		},
 	},
 }

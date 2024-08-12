@@ -22,7 +22,7 @@
 
 <script lang="ts">
 	import { renderStudio } from 'sanity'
-	import config from '$/sanity/sanity.config'
+	import config from '$sanity/sanity.config'
 	import { onMount } from 'svelte'
 
 	let studio: HTMLDivElement

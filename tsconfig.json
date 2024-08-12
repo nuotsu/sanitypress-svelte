@@ -11,7 +11,7 @@
 		"strict": true,
 		"moduleResolution": "bundler"
 	},
-	"include": ["src/**/*", ".svelte-kit/ambient.d.ts"]
+	"include": ["src/**/*", ".svelte-kit/ambient.d.ts", "sanity/**/*"]
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	// except $lib which is handled by https://kit.svelte.dev/docs/configuration#files
 	//
