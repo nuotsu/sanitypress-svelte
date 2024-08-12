@@ -33,6 +33,7 @@
 		"@portabletext/svelte": "^2.1.11",
 		"@sanity/client": "^6.21.2",
 		"@sanity/dashboard": "^4.0.0",
+		"@sanity/image-url": "^1.0.2",
 		"@sanity/svelte-loader": "^1.11.35",
 		"@sanity/ui": "^2.8.8",
 		"@sanity/vision": "^3.53.0",

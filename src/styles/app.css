@@ -171,10 +171,16 @@
 		}
 
 		& a:not(:is(.action, .action-outline, .ghost)) {
-			@apply link;
+			text-decoration: underline;
 
-			&[href^='http'] {
-				@apply is-external;
+			&:hover {
+				text-decoration-thickness: 2px;
+			}
+
+			&[href^='http']::after {
+				content: ' ↗';
+				font-size: 0.7em;
+				vertical-align: top;
 			}
 		}
 

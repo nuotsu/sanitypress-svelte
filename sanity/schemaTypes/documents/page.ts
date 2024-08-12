@@ -30,7 +30,7 @@ export default defineType({
 				// { type: 'custom-html' },
 				// { type: 'flag-list' },
 				// { type: 'hero' },
-				// { type: 'hero.saas' },
+				{ type: 'hero.saas' },
 				// { type: 'hero.split' },
 				// { type: 'logo-list' },
 				// { type: 'pricing-list' },
@@ -42,15 +42,15 @@ export default defineType({
 			],
 			options: {
 				insertMenu: {
-					// views: [{ name: 'list' }, { name: 'grid' }],
-					// groups: [
-					// 	{ name: 'blog', of: ['blog-list', 'blog-post-content'] },
-					// 	{ name: 'hero', of: ['hero', 'hero.saas', 'hero.split'] },
-					// 	{
-					// 		name: 'testimonial',
-					// 		of: ['testimonial-list', 'testimonial.featured'],
-					// 	},
-					// ],
+					views: [{ name: 'list' }, { name: 'grid' }],
+					groups: [
+						// 	{ name: 'blog', of: ['blog-list', 'blog-post-content'] },
+						{ name: 'hero', of: ['hero', 'hero.saas', 'hero.split'] },
+						// 	{
+						// 		name: 'testimonial',
+						// 		of: ['testimonial-list', 'testimonial.featured'],
+						// 	},
+					],
 				},
 			},
 			group: 'content',

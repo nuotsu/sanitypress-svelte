@@ -2,6 +2,7 @@
 import site from './documents/site'
 import page from './documents/page'
 import logo from './documents/logo'
+import reputation from './documents/reputation'
 
 // objects
 import cta from './objects/cta'
@@ -11,12 +12,14 @@ import linkList from './objects/link.list'
 import metadata from './objects/metadata'
 
 // modules
+import heroSaas from './modules/hero.saas'
 
 export const schemaTypes = [
 	// documents
 	site,
 	page,
 	logo,
+	reputation,
 
 	// objects
 	cta,
@@ -26,4 +29,5 @@ export const schemaTypes = [
 	metadata,
 
 	// modules
+	heroSaas,
 ]

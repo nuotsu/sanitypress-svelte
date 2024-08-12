@@ -1,11 +1,11 @@
 <SkipToContent />
-<Header />
+<Header {site} />
 
 <main id="main-content" tabIndex="-1">
 	<slot></slot>
 </main>
 
-<Footer />
+<Footer {site} />
 <PreviewState />
 
 <script lang="ts">
@@ -17,6 +17,11 @@
 	import Header from '$/ui/header/index.svelte'
 	import Footer from '$/ui/footer/index.svelte'
 	import PreviewState from '$/ui/PreviewState.svelte'
+
+	import { useQuery } from '@sanity/svelte-loader'
+	import { siteQuery } from '$/lib/sanity/queries'
+	import { page } from '$app/stores'
+
 	import '$/styles/app.css'
 
 	onMount(() => {
@@ -27,4 +32,13 @@
 			}),
 		})
 	})
+
+	const query = useQuery<Sanity.Site>({
+		query: siteQuery,
+		options: {
+			initial: $page.data.site,
+		},
+	})
+
+	$: ({ data: site } = $query)
 </script>

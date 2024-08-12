@@ -29,18 +29,8 @@
 </footer>
 
 <script lang="ts">
-	import { siteQuery } from '$/lib/sanity/queries'
-	import { page } from '$app/stores'
-	import { useQuery } from '@sanity/svelte-loader'
 	import { PortableText } from '@portabletext/svelte'
 	import Logo from '$/ui/Logo.svelte'
 
-	const query = useQuery<Sanity.Site>({
-		query: siteQuery,
-		options: {
-			initial: $page.data.initial,
-		},
-	})
-
-	$: ({ data: site } = $query)
+	const { site }: { site?: Sanity.Site } = $props()
 </script>
