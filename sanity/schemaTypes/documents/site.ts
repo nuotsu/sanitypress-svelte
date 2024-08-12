@@ -6,7 +6,7 @@ export default defineType({
 	type: 'document',
 	groups: [
 		{ name: 'general', title: 'General', default: true },
-		// { name: 'navigation', title: 'Navigation' },
+		{ name: 'navigation', title: 'Navigation' },
 	],
 	fields: [
 		defineField({
@@ -36,6 +36,24 @@ export default defineType({
 			type: 'array',
 			of: [{ type: 'cta' }],
 			group: 'general',
+		}),
+		defineField({
+			name: 'headerMenu',
+			type: 'reference',
+			to: [{ type: 'navigation' }],
+			group: 'navigation',
+		}),
+		defineField({
+			name: 'footerMenu',
+			type: 'reference',
+			to: [{ type: 'navigation' }],
+			group: 'navigation',
+		}),
+		defineField({
+			name: 'social',
+			type: 'reference',
+			to: [{ type: 'navigation' }],
+			group: 'navigation',
 		}),
 		defineField({
 			name: 'copyright',

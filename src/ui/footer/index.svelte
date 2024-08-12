@@ -12,7 +12,7 @@
 					<!-- Social -->
 				</div>
 
-				<!-- Navigation -->
+				<Navigation menu={site?.footerMenu} />
 			</div>
 		</div>
 	</div>
@@ -31,6 +31,7 @@
 <script lang="ts">
 	import { PortableText } from '@portabletext/svelte'
 	import Logo from '$/ui/Logo.svelte'
+	import Navigation from './Navigation.svelte'
 
 	const { site }: { site?: Sanity.Site } = $props()
 </script>

@@ -1,6 +1,7 @@
 // documents
 import site from './documents/site'
 import page from './documents/page'
+import navigation from './navigation'
 import logo from './documents/logo'
 import reputation from './documents/reputation'
 
@@ -18,6 +19,7 @@ export const schemaTypes = [
 	// documents
 	site,
 	page,
+	navigation,
 	logo,
 	reputation,
 

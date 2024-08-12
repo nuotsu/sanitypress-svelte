@@ -21,7 +21,15 @@ declare global {
 			subtitle?: string
 			logo?: Logo
 			ctas?: CTA[]
+			headerMenu?: Navigation
+			footerMenu?: Navigation
+			social?: Navigation
 			copyright?: any
+		}
+
+		type Navigation = SanityDocument & {
+			title: string
+			items?: (Link | LinkList)[]
 		}
 
 		// pages

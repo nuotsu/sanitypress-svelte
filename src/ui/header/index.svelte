@@ -1,18 +1,19 @@
 <header
-	class="frosted-glass sticky top-0 z-10 border-b border-ink/10 bg-canvas"
+	class="frosted-glass max-md:header-open:shadow-lg sticky top-0 z-10 border-b border-ink/10 bg-canvas"
 >
 	<div class="mx-auto grid max-w-screen-xl items-center gap-x-6 p-4">
 		<div class="[grid-area:logo]">
 			<Logo {site} class="text-gradient" />
 		</div>
 
-		<Navigation />
+		<Navigation menu={site?.headerMenu} />
 
 		<CTAList
 			ctas={site?.ctas}
-			class="[grid-area:ctas] max-md:*:w-full  md:ml-auto"
+			class="max-md:header-closed:hidden [grid-area:ctas] max-md:*:w-full md:ml-auto"
 		/>
-		<!-- Toggle -->
+
+		<Toggle />
 	</div>
 </header>
 
@@ -33,6 +34,7 @@
 	import Logo from '$/ui/Logo.svelte'
 	import Navigation from './Navigation.svelte'
 	import CTAList from '$/ui/CTAList.svelte'
+	import Toggle from './Toggle.svelte'
 
 	const { site }: { site?: Sanity.Site } = $props()
 </script>

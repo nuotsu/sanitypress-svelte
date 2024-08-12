@@ -14,12 +14,12 @@ const structure: StructureResolver = (S, context) =>
 			S.documentTypeListItem('page').title('Pages').icon(VscMultipleWindows),
 			// S.documentTypeListItem('blog.post').title('Blog posts'),
 			// S.documentTypeListItem('blog.category').title('Blog categories'),
-			// S.divider(),
+			S.divider(),
 
 			// S.documentTypeListItem('announcement').title('Announcements'),
-			// S.documentTypeListItem('navigation'),
+			S.documentTypeListItem('navigation'),
 			// S.documentTypeListItem('redirect').title('Redirects'),
-			// S.divider(),
+			S.divider(),
 
 			group(S, 'Miscellaneous', [
 				S.documentTypeListItem('logo').title('Logos'),

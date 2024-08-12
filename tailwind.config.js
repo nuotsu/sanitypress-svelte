@@ -1,3 +1,5 @@
+import plugin from 'tailwindcss/plugin'
+
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ['./src/**/*.{html,svelte}'],
@@ -11,6 +13,11 @@ export default {
 			},
 		},
 	},
-	plugins: [],
+	plugins: [
+		plugin(function ({ addVariant }) {
+			addVariant('header-open', 'body:has(#header-open:checked) &')
+			addVariant('header-closed', 'body:has(#header-open:not(:checked)) &')
+		}),
+	],
 	safelist: [{ pattern: /action.*/ }, 'ghost'],
 }

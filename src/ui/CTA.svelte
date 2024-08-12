@@ -1,7 +1,9 @@
-<a href={href()} class="btn {style} {className}" {...props}>
+<a href={href()} class="btn {style} {className}">
 	{#if link?.type === 'internal'}
 		{@render content()}
 	{:else if link?.type === 'external'}
+		{@render content()}
+	{:else}
 		{@render content()}
 	{/if}
 </a>
@@ -24,7 +26,6 @@
 		link,
 		class: className,
 		children,
-		...props
 	}: {
 		children?: any
 	} & Sanity.CTA &
@@ -35,7 +36,7 @@
 			case 'internal':
 				if (!link.internal) return undefined
 
-				return processUrl(link.internal, {
+				return processUrl(stegaClean(link.internal), {
 					base: false,
 					params: link.params,
 				})
