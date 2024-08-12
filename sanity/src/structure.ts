@@ -11,7 +11,7 @@ const structure: StructureResolver = (S, context) =>
 			singleton(S, 'site', 'Site settings').icon(VscServerProcess),
 			S.divider(),
 
-			// S.documentTypeListItem('page').title('Pages').icon(VscMultipleWindows),
+			S.documentTypeListItem('page').title('Pages').icon(VscMultipleWindows),
 			// S.documentTypeListItem('blog.post').title('Blog posts'),
 			// S.documentTypeListItem('blog.category').title('Blog categories'),
 			// S.divider(),
