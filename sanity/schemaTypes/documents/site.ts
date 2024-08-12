@@ -30,6 +30,14 @@ export default defineType({
 			group: 'general',
 		}),
 		defineField({
+			name: 'ctas',
+			title: 'Call-to-action (Site-wide)',
+			description: 'Typically used in the header and/or footer.',
+			type: 'array',
+			of: [{ type: 'cta' }],
+			group: 'general',
+		}),
+		defineField({
 			name: 'copyright',
 			type: 'array',
 			of: [

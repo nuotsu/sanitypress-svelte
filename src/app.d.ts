@@ -19,6 +19,8 @@ declare global {
 		type Site = SanityDocument & {
 			title: string
 			subtitle?: string
+			logo?: Logo
+			ctas?: CTA[]
 			copyright?: any
 		}
 

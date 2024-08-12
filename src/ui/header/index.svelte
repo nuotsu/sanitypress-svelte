@@ -7,7 +7,11 @@
 		</div>
 
 		<Navigation />
-		<!-- CTA List -->
+
+		<CTAList
+			ctas={site?.ctas}
+			class="[grid-area:ctas] max-md:*:w-full  md:ml-auto"
+		/>
 		<!-- Toggle -->
 	</div>
 </header>
@@ -28,6 +32,7 @@
 <script lang="ts">
 	import Logo from '$/ui/Logo.svelte'
 	import Navigation from './Navigation.svelte'
+	import CTAList from '$/ui/CTAList.svelte'
 
 	const { site }: { site?: Sanity.Site } = $props()
 </script>
