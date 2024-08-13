@@ -1,8 +1,12 @@
 {#if reputation}
-	<div class="flex flex-wrap items-center gap-x-6 gap-y-2 {className}">
-		{#await getStargazers(reputation)}
-			Loading...
-		{:then { count, avatars }}
+	<div
+		class={cn(
+			'[&:not(:empty)]:anim-fade-to-r flex flex-wrap items-center gap-x-6 gap-y-2',
+			reputation.subtitle ? 'min-h-[1.8lh]' : 'min-h-[1.3lh]',
+			className,
+		)}
+	>
+		{#await getStargazers(reputation) then { count, avatars }}
 			<figure class="flex empty:hidden">
 				{#if avatars}
 					{#each avatars as { avatar_url, login }}
@@ -50,6 +54,7 @@
 <script lang="ts">
 	import getStargazers from './getStargazers'
 	import Img from '$/ui/Img.svelte'
+	import { cn } from '$/lib'
 
 	const {
 		reputation,

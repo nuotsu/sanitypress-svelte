@@ -1,5 +1,5 @@
 <header
-	class="frosted-glass max-md:header-open:shadow-lg sticky top-0 z-10 border-b border-ink/10 bg-canvas"
+	class="frosted-glass sticky top-0 z-10 border-b border-ink/10 bg-canvas max-md:header-open:shadow-lg"
 >
 	<div class="mx-auto grid max-w-screen-xl items-center gap-x-6 p-4">
 		<div class="[grid-area:logo]">
@@ -10,7 +10,7 @@
 
 		<CTAList
 			ctas={site?.ctas}
-			class="max-md:header-closed:hidden [grid-area:ctas] max-md:*:w-full md:ml-auto"
+			class="[grid-area:ctas] max-md:*:w-full max-md:header-closed:hidden md:ml-auto"
 		/>
 
 		<Toggle />
