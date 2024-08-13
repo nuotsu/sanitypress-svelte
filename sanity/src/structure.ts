@@ -18,7 +18,7 @@ const structure: StructureResolver = (S, context) =>
 
 			// S.documentTypeListItem('announcement').title('Announcements'),
 			S.documentTypeListItem('navigation'),
-			// S.documentTypeListItem('redirect').title('Redirects'),
+			S.documentTypeListItem('redirect').title('Redirects'),
 			S.divider(),
 
 			group(S, 'Miscellaneous', [

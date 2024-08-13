@@ -35,9 +35,7 @@
 
 	const query = useQuery<Sanity.Site>({
 		query: siteQuery,
-		options: {
-			initial: $page.data.site,
-		},
+		options: { initial: $page.data.site },
 	})
 
 	$: ({ data: site } = $query)

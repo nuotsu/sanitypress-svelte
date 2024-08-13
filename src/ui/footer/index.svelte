@@ -8,8 +8,7 @@
 					class="flex flex-col gap-3 self-start max-sm:mx-auto max-sm:items-center"
 				>
 					<Logo {site} />
-
-					<!-- Social -->
+					<Social menu={site?.social} />
 				</div>
 
 				<Navigation menu={site?.footerMenu} />
@@ -31,6 +30,7 @@
 <script lang="ts">
 	import { PortableText } from '@portabletext/svelte'
 	import Logo from '$/ui/Logo.svelte'
+	import Social from '$/ui/Social.svelte'
 	import Navigation from './Navigation.svelte'
 
 	const { site }: { site?: Sanity.Site } = $props()

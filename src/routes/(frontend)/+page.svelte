@@ -20,12 +20,8 @@
 
 	const query = useQuery<Sanity.Page>({
 		query: indexQuery,
-		params: {
-			slug: 'index',
-		},
-		options: {
-			initial: $page.data.index,
-		},
+		params: { slug: 'index' },
+		options: { initial: $page.data.index },
 	})
 
 	$: ({ data } = $query)

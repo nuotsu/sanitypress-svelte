@@ -1,4 +1,4 @@
-<a href={href()} class="btn {style} {className}">
+<a href={href()} class="btn {style} {className}" {...props}>
 	{#if link?.type === 'internal'}
 		{@render content()}
 	{:else if link?.type === 'external'}
@@ -26,6 +26,7 @@
 		link,
 		class: className,
 		children,
+		...props
 	}: {
 		children?: any
 	} & Sanity.CTA &

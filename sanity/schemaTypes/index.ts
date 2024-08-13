@@ -2,6 +2,7 @@
 import site from './documents/site'
 import page from './documents/page'
 import navigation from './navigation'
+import redirect from './documents/redirect'
 import logo from './documents/logo'
 import reputation from './documents/reputation'
 
@@ -20,6 +21,7 @@ export const schemaTypes = [
 	site,
 	page,
 	navigation,
+	redirect,
 	logo,
 	reputation,
 

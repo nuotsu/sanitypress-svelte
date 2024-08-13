@@ -1,5 +1,11 @@
 <InteractiveDetails class="group relative" closeAfterNavigation>
-	<summary class="flex items-center gap-1 md:px-3">{link.label}</summary>
+	<summary class="flex items-center gap-1 md:px-3">
+		{link.label}
+		<Icon
+			icon="carbon:chevron-right"
+			class="transition-transform group-open:rotate-90 md:rotate-90"
+		/>
+	</summary>
 
 	<ul
 		class="
@@ -23,6 +29,7 @@
 
 <script lang="ts">
 	import InteractiveDetails from '$/ui/InteractiveDetails.svelte'
+	import Icon from '@iconify/svelte'
 	import CTA from '$/ui/CTA.svelte'
 	import { cn } from '$/lib'
 
