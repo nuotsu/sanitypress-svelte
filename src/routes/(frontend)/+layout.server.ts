@@ -1,7 +1,7 @@
+import { redirect } from '@sveltejs/kit'
 import groq from 'groq'
 import { siteQuery } from '$/lib/sanity/queries'
 import type { LayoutServerLoad } from './$types'
-import { redirect } from '@sveltejs/kit'
 
 export const load: LayoutServerLoad = async ({
 	url,

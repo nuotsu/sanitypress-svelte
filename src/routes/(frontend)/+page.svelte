@@ -24,5 +24,5 @@
 		options: { initial: $page.data.index },
 	})
 
-	$: ({ data } = $query)
+	const { data } = $query
 </script>

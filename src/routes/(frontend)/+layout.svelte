@@ -2,7 +2,7 @@
 <Header {site} />
 
 <main id="main-content" tabIndex="-1">
-	<slot></slot>
+	{@render children()}
 </main>
 
 <Footer {site} />
@@ -24,6 +24,8 @@
 
 	import '$/styles/app.css'
 
+	const { children }: { children: any } = $props()
+
 	onMount(() => {
 		enableVisualEditing()
 		useLiveMode({
@@ -38,5 +40,5 @@
 		options: { initial: $page.data.site },
 	})
 
-	$: ({ data: site } = $query)
+	const { data: site } = $query
 </script>

@@ -10,7 +10,6 @@ export default createClient({
 	apiVersion: '2024-08-01',
 	useCdn: true,
 	stega: {
-		enabled: false,
 		studioUrl: '/admin',
 	},
 })
