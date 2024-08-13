@@ -3,14 +3,17 @@ import { error } from '@sveltejs/kit'
 import type { PageServerLoad } from './$types'
 
 export const load: PageServerLoad = async ({
-	params,
+	params: { slug },
 	locals: { loadQuery },
 }) => {
-	const page = await loadQuery<Sanity.Page>(pageQuery, { slug: params.slug })
+	const page = await loadQuery<Sanity.Page>(pageQuery, { slug })
 
 	if (!page?.data) {
 		error(404, 'Page not found')
 	}
 
-	return { params, page }
+	return {
+		params: { slug },
+		page,
+	}
 }
