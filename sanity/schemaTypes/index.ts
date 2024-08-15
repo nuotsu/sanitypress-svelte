@@ -14,6 +14,7 @@ import linkList from './objects/link.list'
 import metadata from './objects/metadata'
 
 // modules
+import hero from './modules/hero'
 import heroSaas from './modules/hero.saas'
 
 export const schemaTypes = [
@@ -33,5 +34,6 @@ export const schemaTypes = [
 	metadata,
 
 	// modules
+	hero,
 	heroSaas,
 ]

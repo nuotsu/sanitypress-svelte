@@ -9,7 +9,6 @@
 <PreviewState />
 
 <script lang="ts">
-	import { onMount } from 'svelte'
 	import { enableVisualEditing } from '@sanity/visual-editing'
 	import { useLiveMode } from '@sanity/svelte-loader'
 	import client from '$lib/sanity/client'
@@ -26,19 +25,21 @@
 
 	const { children }: { children: any } = $props()
 
-	onMount(() => {
+	let site: Sanity.Site | undefined = $state()
+
+	$effect.pre(() => {
 		enableVisualEditing()
 		useLiveMode({
 			client: client.withConfig({
 				stega: true,
 			}),
 		})
-	})
 
-	const query = useQuery<Sanity.Site>({
-		query: siteQuery,
-		options: { initial: $page.data.site },
-	})
+		const query = useQuery<Sanity.Site>({
+			query: siteQuery,
+			options: { initial: $page.data.site },
+		})
 
-	const { data: site } = $query
+		query.subscribe((q) => (site = q.data))
+	})
 </script>

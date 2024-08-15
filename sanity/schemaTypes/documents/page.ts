@@ -29,7 +29,7 @@ export default defineType({
 				// { type: 'creative-module' },
 				// { type: 'custom-html' },
 				// { type: 'flag-list' },
-				// { type: 'hero' },
+				{ type: 'hero' },
 				{ type: 'hero.saas' },
 				// { type: 'hero.split' },
 				// { type: 'logo-list' },

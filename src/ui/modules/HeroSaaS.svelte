@@ -1,6 +1,6 @@
 <section class="section space-y-8 text-center">
 	<div class="richtext mx-auto max-w-2xl text-balance">
-		<Pretitle value={pretitle} />
+		<Pretitle {pretitle} />
 		<PortableText value={content} components={{}} />
 		<Reputation {reputation} class="!mt-4 justify-center" />
 		<CTAList {ctas} class="!mt-8 justify-center" />

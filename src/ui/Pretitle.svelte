@@ -2,7 +2,7 @@
 	{#if children}
 		{@render children()}
 	{:else}
-		{stegaClean(value)}
+		{stegaClean(pretitle)}
 	{/if}
 </p>
 
@@ -10,11 +10,11 @@
 	import { stegaClean } from '@sanity/client/stega'
 
 	const {
-		value,
+		pretitle,
 		class: className,
 		children,
 	}: {
-		value?: string
+		pretitle?: string
 		class?: string
 		children?: any
 	} = $props()
